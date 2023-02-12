@@ -4,7 +4,11 @@
 
 // Nota: si el número es un múltiplo de 3 y 5, solo cuéntelo una vez.
 
-const multiplos = (number) => number > 0 ? Array.from({length: number}, (v, i) => i).filter((item)=> item % 3 == 0 || item % 5 == 0).reduce((acc,prev)=> acc + prev) : 0
-
+const multiplos = (number) =>
+  number > 0
+    ? Array.from({ length: number }, (v, i) => i)
+        .filter((item) => item % 3 == 0 || item % 5 == 0)
+        .reduce((acc, prev) => acc + prev)
+    : 0;
 
 console.log(multiplos(10));
