@@ -8,13 +8,12 @@ const arr = [
   { name: "Lucía", age: 18 },
   { name: "Jorge", age: 20 },
 ];
-const propiedad = "age";
 
 const agesAndNames = arr.reduce((prev, {age, name})=>{ prev[age] ? prev[age] = [{...arr.find((item)=> item.age == age ) }, {name, age}] : prev[age] =  [{...arr.find((item)=> item.age == age)}]
     return prev
 }, {})
-
-console.log(agesAndNames);
+console.time();
+console.log('resultado', agesAndNames);
 
 // Salida:
 // cssCopy code
