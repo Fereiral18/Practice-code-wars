@@ -14,7 +14,8 @@ const motors = [
     { make: "kia", model: "optima", year: "2012" },
   ];
     
-    const marcasAgrupadas = cars.reduce((acc,{make, ...cars})=> { acc[make] ? acc[make] = [...acc[make], {...cars, cylinder : motors.find(item => item.model == cars.model)?.cylinder || 'Unknown' }] : acc[make] = [{...cars, cylinder : motors.find(item => item.model == cars.model)?.cylinder || 'Unknown' }]
+    const marcasAgrupadas = cars.reduce((acc,{make, ...cars})=> { 
+      acc[make] ? acc[make] = [...acc[make], {...cars, cylinder : motors.find(item => item.model == cars.model)?.cylinder || 'Unknown' }] : acc[make] = [{...cars, cylinder : motors.find(item => item.model == cars.model)?.cylinder || 'Unknown' }]
       return acc
      },{});
 

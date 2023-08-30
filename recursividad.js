@@ -1,12 +1,10 @@
 //Recursividad
-
-function sum(nums) {
-  if (nums < 1) {
-    return -1;
-  } else {
-    const [...nums] = nums;
-    return nums;
+let cuentaAtras = (numero) => {
+  //base case
+  if (numero === 0) {
+    return;
   }
-}
-
-console.log(sum(10));
+  console.log(numero);
+  return cuentaAtras(numero - 1);
+};
+console.log(cuentaAtras(4));
