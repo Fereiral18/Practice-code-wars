@@ -5,14 +5,11 @@ let indices = resultPrimesNumbers.map((item, indice)=> indice + 2)
 
 indices.forEach(x => (resultPrimesNumbers = resultPrimesNumbers.filter(y => y % x !== 0 || y === x)));
 let primorialsNumbers = resultPrimesNumbers.slice(0, num)
-return primorialsNumbers
-// return resultPrimesNumbers.reduce((prev, acc)=> prev * acc)
 
-// ` elementos en el array: " ${resultPrimesNumbers.map((item)=> item)}" + " indices del array: ${resultPrimesNumbers.map((item, indx)=> indx + 2)}`
-
+return primorialsNumbers.reduce((prev, acc)=> prev * acc)
 }
 
-console.log(numbersOfPrimorial(15));
+console.log(numbersOfPrimorial(3));
 
 //   Test.assertEquals(numPrimorial(3),30);
 //   Test.assertEquals(numPrimorial(4),210);
