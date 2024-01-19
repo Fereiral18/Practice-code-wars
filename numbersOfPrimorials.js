@@ -2,8 +2,11 @@ const numbersOfPrimorial = (num) =>{
 let primesNumbers = num * 4
 let resultPrimesNumbers = Array.from({ length: primesNumbers}, (_, i) => i + 2 )
 let indices = resultPrimesNumbers.map((item, indice)=> indice + 2)
+indices.forEach(x => (resultPrimesNumbers = resultPrimesNumbers.filter(y => y % x !== 0 || y === x)) 
 
-indices.forEach(x => (resultPrimesNumbers = resultPrimesNumbers.filter(y => y % x !== 0 || y === x)));
+);
+
+
 let primorialsNumbers = resultPrimesNumbers.slice(0, num)
 
 return primorialsNumbers.reduce((prev, acc)=> prev * acc)

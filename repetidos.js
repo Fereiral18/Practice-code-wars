@@ -1,6 +1,11 @@
-const withoutDuplicatesAndA = (array) => {
-    let indicador = array.filter((valor, indice, arreglo) => arreglo.indexOf(valor) !== indice);
-
-    return array.filter((item, indx)=> item !== indicador[0])
-};
-console.log(withoutDuplicatesAndA(["m","a","r","i","a"]));
+const withoutDuplicatesAndA = (arr) => {
+    const unicos = [];
+    arr.forEach( (elemento) => {
+      if (!unicos.includes(elemento)) {
+        unicos.push(elemento);
+      }
+    });
+    
+    return unicos;
+    };
+console.log(withoutDuplicatesAndA(["m","a","r","i","a","a", "m","m"]));
